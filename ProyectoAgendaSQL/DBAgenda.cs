@@ -19,7 +19,7 @@ namespace ProyectoAgendaSQL
         public static List<Empleado> BuscarUserEmpleadoLogIn(string userEmpleado)
         {
             List<Empleado> listaUserEmpleado = new List<Empleado>();
-            string consulta = string.Format("SELECT * FROM Empleado WHERE User LIKE '{0}'", userEmpleado);
+            string consulta = string.Format("select * from Empleado where User = 'a'");
             SqlCommand comando = new SqlCommand(consulta, conexion);
             SqlDataReader reader = comando.ExecuteReader();
 

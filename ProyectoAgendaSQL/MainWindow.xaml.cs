@@ -23,18 +23,21 @@ namespace ProyectoAgendaSQL
         public MainWindow()
         {
             InitializeComponent();
+            DBAgenda.DBConectar();
         }
 
         private void btnAccederLogin_Click(object sender, RoutedEventArgs e)
         {
             List<Empleado> userLogIn = DBAgenda.BuscarUserEmpleadoLogIn(txtUsuario.Text);
             if (userLogIn.Count == 0)
+            {
                 MessageBox.Show("User Empleado Not Found");
-            else
-                MessageBox.Show("User Empleado Found");
-            
+            }
+            else { 
+            MessageBox.Show("User Empleado Found");
+                }
         }
 
-        
     }
+
 }
