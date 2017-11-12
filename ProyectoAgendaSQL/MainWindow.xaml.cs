@@ -29,7 +29,9 @@ namespace ProyectoAgendaSQL
         {
             List<Empleado> userLogIn = DBAgenda.BuscarUserEmpleadoLogIn(txtUsuario.Text);
             if (userLogIn.Count == 0)
-                MessageBox.Show("User Empledo Not Found");
+                MessageBox.Show("User Empleado Not Found");
+            else
+                MessageBox.Show("User Empleado Found");
             
         }
 
