@@ -71,6 +71,10 @@ namespace ProyectoAgendaSQL
             set { password = value; }
         }
 
+        public Empleado()
+        {
+        }
+
         public Empleado(int id)
         {
             this.id = id;

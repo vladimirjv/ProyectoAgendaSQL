@@ -29,15 +29,15 @@ namespace ProyectoAgendaSQL
             set { descripcion = value; }
         }
 
-        public Sucursal(int id)
+        public Sucursal(int id, string nombre)
         {
             this.id = id;
+            this.nombre = nombre;
         }
 
         public Sucursal(int id, string nombre, string descripcion)
-            : this(id)
+            : this(id, nombre)
         {
-            this.nombre = nombre;
             this.descripcion = descripcion;
         }
     }

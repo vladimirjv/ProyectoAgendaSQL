@@ -55,10 +55,42 @@ namespace ProyectoAgendaSQL
         public static int AgregarEmpleado(Empleado empleado)
         {
             int filasAfectadas = 0;
-            string consulta = string.Format("INSERT INTO Empleado (Nombre, Materia, Calificacion) VALUES ('{0}', '{1}', '{2}')", empleado.Nombre, empleado.Telefono, empleado.Fax, empleado.Email);
+            string consulta = string.Format("INSERT INTO Empleado (Nombre, Telefono, Fax, Email, Departamento, Sucursal, Usuario, Password) VALUES ('{0}', '{1}', '{2}', '{3}', {4}, {5}, '{6}', '{7}')", empleado.Nombre, empleado.Telefono, empleado.Fax, empleado.Email, empleado.Departamento, empleado.Sucursal, empleado.Usuario, empleado.Password);
             SqlCommand comando = new SqlCommand(consulta, conexion);
             filasAfectadas = comando.ExecuteNonQuery();
             return filasAfectadas;
+        }
+
+        public static List<Departamento> listaDepartamentos()
+        {
+            List<Departamento> listaDepartamentos = new List<Departamento>();
+            string consulta = "SELECT Id, Nombre FROM Departamento";
+            SqlCommand comando = new SqlCommand(consulta, conexion);
+            SqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                listaDepartamentos.Add(new Departamento(reader.GetInt32(0), reader.GetString(1)));
+            }
+
+            reader.Close();
+            return listaDepartamentos;
+        }
+
+        public static List<Sucursal> listaSucursales()
+        {
+            List<Sucursal> listaSucursales = new List<Sucursal>();
+            string consulta = "SELECT Id, Nombre FROM Sucursal";
+            SqlCommand comando = new SqlCommand(consulta, conexion);
+            SqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                listaSucursales.Add(new Sucursal(reader.GetInt32(0), reader.GetString(1)));
+            }
+
+            reader.Close();
+            return listaSucursales;
         }
 
     }

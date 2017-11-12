@@ -29,14 +29,14 @@ namespace ProyectoAgendaSQL
             set { descripcion = value; }
         }
 
-        public Departamento(int id)
+        public Departamento(int id, string nombre)
         {
             this.id = id;
+            this.nombre = nombre;
         }
         public Departamento(int id, string nombre, string descripcion)
-            : this(id)
+            : this(id, nombre)
         {
-            this.nombre = nombre;
             this.descripcion = descripcion;
         }
     }

@@ -19,9 +19,57 @@ namespace ProyectoAgendaSQL
     /// </summary>
     public partial class wEmpleado : Window
     {
+        List<Departamento> listaDepartamentos;
+        List<Sucursal> listaSucursales;
+
         public wEmpleado()
         {
             InitializeComponent();
+
+            //Se llenan los ComboBox, y se cargan las listas de departamentos y sucursales.
+            listaDepartamentos = DBAgenda.listaDepartamentos();
+            cmbDepartamento.ItemsSource = listaDepartamentos;
+            cmbDepartamento.DisplayMemberPath = "Nombre";
+            cmbDepartamento.Items.Refresh();
+            cmbDepartamento.SelectedIndex = 0;
+
+            listaSucursales = DBAgenda.listaSucursales();
+            cmbSucursal.ItemsSource = listaSucursales;
+            cmbSucursal.DisplayMemberPath = "Nombre";
+            cmbSucursal.Items.Refresh();
+            cmbSucursal.SelectedIndex = 0;
+        }
+
+        private void btnAgregar_Click(object sender, RoutedEventArgs e)
+        {
+            try{
+                List<Empleado> userEmpleadoLogIn = DBAgenda.MatchUsuarioEmpleado(txtUsuario.Text);
+                if (userEmpleadoLogIn.Count == 0)
+                {
+                    Empleado empleado = new Empleado();
+                    empleado.Nombre = txtNombre.Text;
+                    empleado.Telefono = txtTelefono.Text;
+                    empleado.Fax = txtFax.Text;
+                    empleado.Email = txtEmail.Text;
+                    empleado.Departamento = listaDepartamentos.ElementAt(cmbDepartamento.SelectedIndex).Id;
+                    empleado.Sucursal = listaSucursales.ElementAt(cmbSucursal.SelectedIndex).Id; ;
+                    empleado.Usuario = txtUsuario.Text;
+                    empleado.Password = txtPassword.Password;
+                    DBAgenda.AgregarEmpleado(empleado);
+
+                    MessageBox.Show("Registro Añadido con Exito :)");
+                }
+                else
+                    MessageBox.Show("El usuario ya existe. Favor de introducir otro nombre de usuario ;)");               
+            }
+            catch(Exception)    {
+                MessageBox.Show("Revise los Datos Introducidos :(");
+            }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
