@@ -1,1 +1,2 @@
 c:\users\b6-ju\documents\visual studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\bin\Debug\ProyectoAgendaSQL.exe.config
+C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\bin\Debug\ProyectoAgendaSQL.exe.config
