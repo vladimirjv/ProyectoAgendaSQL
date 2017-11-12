@@ -57,11 +57,11 @@ namespace ProyectoAgendaSQL
             set { sucursal = value; }
         }
 
-        private string user;
-        public string User
+        private string usuario;
+        public string Usuario
         {
-            get { return user; }
-            set { user = value; }
+            get { return usuario; }
+            set { usuario = value; }
         }
 
         private string password;
@@ -76,14 +76,14 @@ namespace ProyectoAgendaSQL
             this.id = id;
         }
 
-        public Empleado(int id, string user, string password)
+        public Empleado(int id, string usuario, string password)
             : this(id)
         {
-            this.user = user;
+            this.usuario = usuario;
             this.password = password;
         }
 
-        public Empleado(int id, string nombre, string telefono, string fax, string email, int departamento, int sucursal, string user, string password)
+        public Empleado(int id, string nombre, string telefono, string fax, string email, int departamento, int sucursal, string usuario, string password)
             : this(id)
         {
             this.nombre = nombre;
@@ -92,7 +92,7 @@ namespace ProyectoAgendaSQL
             this.email = email;
             this.departamento = departamento;
             this.sucursal = sucursal;
-            this.user = user;
+            this.usuario = usuario;
             this.password = password;
         }
     }
