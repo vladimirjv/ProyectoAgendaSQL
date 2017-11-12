@@ -8,10 +8,9 @@
             <Label Content="Usuario" HorizontalAlignment="Left" Height="27" Margin="10,23,0,0" VerticalAlignment="Top" Width="77" FontFamily="Oswald SemiBold" FontWeight="Bold" RenderTransformOrigin="-0.115,-1.225" FontSize="16"/>
             <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="26" Margin="101,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="223" FontSize="16"/>
             <Label Content="Password" HorizontalAlignment="Left" Height="27" Margin="10,69,0,0" VerticalAlignment="Top" Width="86" FontFamily="Oswald SemiBold" FontWeight="Bold" RenderTransformOrigin="-0.115,-1.225" FontSize="16"/>
-            <Button x:Name="btnAccederLogin" Content="Acceder" HorizontalAlignment="Left" Height="29" Margin="101,109,0,0" VerticalAlignment="Top" Width="146" FontSize="16"/>
+            <Button x:Name="btnAccederLogin" Content="Acceder" HorizontalAlignment="Left" Height="29" Margin="101,109,0,0" VerticalAlignment="Top" Width="146" FontSize="16" Click="btnAccederLogin_Click"/>
             <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="101,69,0,0" VerticalAlignment="Top" Width="223" FontSize="16"/>
         </Grid>
         <Button x:Name="btnAyudaLogIn" Content="Ayuda" HorizontalAlignment="Left" Height="27" Margin="377,218,0,0" VerticalAlignment="Top" Width="54" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16"/>
-
     </Grid>
 </Window>
