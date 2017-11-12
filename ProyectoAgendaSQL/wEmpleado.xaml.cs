@@ -80,5 +80,36 @@ namespace ProyectoAgendaSQL
                 listViewEmpleados.Items.Refresh();
             }
         }
+
+        private void listViewEmpleados_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                if (listViewEmpleados.SelectedItems.Count == 1)
+                {
+                    Empleado empleadoSeleccionado = (Empleado)listViewEmpleados.SelectedItem;
+                    txtNombre.Text = empleadoSeleccionado.Nombre;
+                    txtTelefono.Text = empleadoSeleccionado.Telefono;
+                    txtFax.Text = empleadoSeleccionado.Fax;
+                    txtEmail.Text = empleadoSeleccionado.Telefono;
+                    Departamento departamento = listaDepartamentos.Find(x => x.Id == empleadoSeleccionado.Departamento );
+                    cmbDepartamento.SelectedItem  = departamento;
+                    Sucursal sucursal = listaSucursales.Find(x => x.Id == empleadoSeleccionado.Sucursal);
+                    cmbSucursal.SelectedItem = sucursal;
+                }
+                else
+                {
+                    txtNombre.Text = "";
+                    txtTelefono.Text = "";
+                    txtFax.Text = "";
+                    txtEmail.Text = "";
+                    cmbDepartamento.SelectedIndex = 0;
+                    cmbSucursal.SelectedIndex = 0;
+                    txtUsuario.Text = "";
+                    txtPassword.Password = "";
+                }
+            }
+            catch (Exception) { }
+        }
     }
 }
