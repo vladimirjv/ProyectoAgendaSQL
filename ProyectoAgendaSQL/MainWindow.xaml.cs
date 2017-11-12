@@ -24,5 +24,7 @@ namespace ProyectoAgendaSQL
         {
             InitializeComponent();
         }
+
+        
     }
 }
