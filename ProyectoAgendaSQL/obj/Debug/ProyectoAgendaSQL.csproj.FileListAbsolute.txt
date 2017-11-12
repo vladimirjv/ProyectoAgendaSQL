@@ -15,3 +15,15 @@ C:\Users\B6-JU\documents\visual studio 2013\Projects\ProyectoAgendaSQL\ProyectoA
 C:\Users\B6-JU\documents\visual studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.exe
 C:\Users\B6-JU\documents\visual studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.pdb
 >>>>>>> 6f3624d815e4c8482e96fa64b0f9244b8c2690b1
+C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.exe
+C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.pdb
+C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\bin\Debug\ProyectoAgendaSQL.exe
+C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\bin\Debug\ProyectoAgendaSQL.pdb
+C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.csprojResolveAssemblyReference.cache
+C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\MainWindow.baml
+C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\MainWindow.g.cs
+C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\App.g.cs
+C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL_MarkupCompile.cache
+C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.g.resources
+C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.Properties.Resources.resources
+C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.csproj.GenerateResource.Cache
