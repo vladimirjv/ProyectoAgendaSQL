@@ -93,5 +93,29 @@ namespace ProyectoAgendaSQL
             return listaSucursales;
         }
 
+        public static List<Empleado> BuscarEmpleadosModificarEliminar(string nombreBuscar)
+        {
+            List<Empleado> listaEmpleados = new List<Empleado>();
+            string consulta = string.Format("SELECT Id, Nombre, Telefono, Fax, Email, Departamento, Sucursal FROM Empleado WHERE Nombre like '%{0}%'", nombreBuscar);
+            SqlCommand comando = new SqlCommand(consulta, conexion);
+            SqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Empleado aux = new Empleado();
+                aux.Id = reader.GetInt32(0);
+                aux.Nombre = reader.GetString(1);
+                aux.Telefono = reader.GetString(2);
+                aux.Fax = reader.GetString(3);
+                aux.Email = reader.GetString(4);
+                aux.Departamento = reader.GetInt32(5);
+                aux.Sucursal= reader.GetInt32(6);
+                listaEmpleados.Add(aux);
+            }
+
+            reader.Close();
+            return listaEmpleados;
+        }
+
     }
 }

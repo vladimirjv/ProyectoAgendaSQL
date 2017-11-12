@@ -71,5 +71,14 @@ namespace ProyectoAgendaSQL
         {
 
         }
+
+        private void txtBuscarEmpleado_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                listViewEmpleados.ItemsSource = DBAgenda.BuscarEmpleadosModificarEliminar(txtBuscarEmpleado.Text);
+                listViewEmpleados.Items.Refresh();
+            }
+        }
     }
 }
