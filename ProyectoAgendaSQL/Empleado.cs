@@ -43,15 +43,15 @@ namespace ProyectoAgendaSQL
             set { email = value; }
         }
 
-        private int departamento;
-        public int Departamento
+        private Departamento departamento;
+        public Departamento Departamento
         {
             get { return departamento; }
             set { departamento = value; }
         }
 
-        private int sucursal;
-        public int Sucursal
+        private Sucursal sucursal;
+        public Sucursal Sucursal
         {
             get { return sucursal; }
             set { sucursal = value; }
@@ -87,7 +87,7 @@ namespace ProyectoAgendaSQL
             this.password = password;
         }
 
-        public Empleado(int id, string nombre, string telefono, string fax, string email, int departamento, int sucursal, string usuario, string password)
+        public Empleado(int id, string nombre, string telefono, string fax, string email, Departamento departamento, Sucursal sucursal, string usuario, string password)
             : this(id)
         {
             this.nombre = nombre;

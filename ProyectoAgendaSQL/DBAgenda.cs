@@ -55,7 +55,7 @@ namespace ProyectoAgendaSQL
         public static int AgregarEmpleado(Empleado empleado)
         {
             int filasAfectadas = 0;
-            string consulta = string.Format("INSERT INTO Empleado (Nombre, Telefono, Fax, Email, Departamento, Sucursal, Usuario, Password) VALUES ('{0}', '{1}', '{2}', '{3}', {4}, {5}, '{6}', '{7}')", empleado.Nombre, empleado.Telefono, empleado.Fax, empleado.Email, empleado.Departamento, empleado.Sucursal, empleado.Usuario, empleado.Password);
+            string consulta = string.Format("INSERT INTO Empleado (Nombre, Telefono, Fax, Email, Departamento, Sucursal, Usuario, Password) VALUES ('{0}', '{1}', '{2}', '{3}', {4}, {5}, '{6}', '{7}')", empleado.Nombre, empleado.Telefono, empleado.Fax, empleado.Email, empleado.Departamento.Id, empleado.Sucursal.Id, empleado.Usuario, empleado.Password);
             SqlCommand comando = new SqlCommand(consulta, conexion);
             filasAfectadas = comando.ExecuteNonQuery();
             return filasAfectadas;
@@ -93,6 +93,26 @@ namespace ProyectoAgendaSQL
             return listaSucursales;
         }
 
+        public static Departamento BusquedaIdDepartamento(int id)
+        {
+            Departamento buscado;
+            string consulta = string.Format("SELECT * FROM Departameto WHERE Id='{0}'", id);
+            SqlCommand comando = new SqlCommand(consulta, conexion);
+            SqlDataReader reader = comando.ExecuteReader();
+            return buscado = new Departamento(id, reader.GetString(1), reader.GetString(2));
+        }
+
+        public static Sucursal BusquedaIdSucursal(int id)
+        {
+            Sucursal buscado;
+            string consulta = string.Format("SELECT * FROM Sucursal WHERE Id='{0}'", id);
+            SqlCommand comando = new SqlCommand(consulta, conexion);
+            SqlDataReader reader = comando.ExecuteReader();
+            return buscado = new Sucursal(id, reader.GetString(1), reader.GetString(2));
+
+        }
+
+
         public static List<Empleado> BuscarEmpleadosModificarEliminar(string nombreBuscar)
         {
             List<Empleado> listaEmpleados = new List<Empleado>();
@@ -108,8 +128,8 @@ namespace ProyectoAgendaSQL
                 aux.Telefono = reader.GetString(2);
                 aux.Fax = reader.GetString(3);
                 aux.Email = reader.GetString(4);
-                aux.Departamento = reader.GetInt32(5);
-                aux.Sucursal= reader.GetInt32(6);
+                aux.Departamento = BusquedaIdDepartamento(reader.GetInt32(5));
+                aux.Sucursal= BusquedaIdSucursal(reader.GetInt32(6));
                 listaEmpleados.Add(aux);
             }
 

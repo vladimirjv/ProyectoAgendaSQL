@@ -51,8 +51,8 @@ namespace ProyectoAgendaSQL
                     empleado.Telefono = txtTelefono.Text;
                     empleado.Fax = txtFax.Text;
                     empleado.Email = txtEmail.Text;
-                    empleado.Departamento = listaDepartamentos.ElementAt(cmbDepartamento.SelectedIndex).Id;
-                    empleado.Sucursal = listaSucursales.ElementAt(cmbSucursal.SelectedIndex).Id; ;
+                    empleado.Departamento = listaDepartamentos.ElementAt(cmbDepartamento.SelectedIndex);
+                    empleado.Sucursal = listaSucursales.ElementAt(cmbSucursal.SelectedIndex); ;
                     empleado.Usuario = txtUsuario.Text;
                     empleado.Password = txtPassword.Password;
                     DBAgenda.AgregarEmpleado(empleado);
@@ -92,10 +92,8 @@ namespace ProyectoAgendaSQL
                     txtTelefono.Text = empleadoSeleccionado.Telefono;
                     txtFax.Text = empleadoSeleccionado.Fax;
                     txtEmail.Text = empleadoSeleccionado.Telefono;
-                    Departamento departamento = listaDepartamentos.Find(x => x.Id == empleadoSeleccionado.Departamento );
-                    cmbDepartamento.SelectedItem  = departamento;
-                    Sucursal sucursal = listaSucursales.Find(x => x.Id == empleadoSeleccionado.Sucursal);
-                    cmbSucursal.SelectedItem = sucursal;
+                    cmbDepartamento.SelectedItem  = empleadoSeleccionado.Departamento;
+                    cmbSucursal.SelectedItem = empleadoSeleccionado.Sucursal;
                 }
                 else
                 {
