@@ -1,0 +1,16 @@
+﻿<Window x:Name="Bienvenida" x:Class="ProyectoAgendaSQL.Inicio"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Inicio" Height="498.701" Width="600">
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="308" Margin="76,74,0,0" VerticalAlignment="Top" Width="482" Source="Sources/ivin.jpg" Stretch="UniformToFill"/>
+        <Menu HorizontalAlignment="Left" Height="237" Margin="27,50,0,0" VerticalAlignment="Top" Width="104">
+            <ListBoxItem Content="Inicio"/>
+            <ListBoxItem Content="Administrador"/>
+            <ListBoxItem Content="Consultas"/>
+            <ListBoxItem Content="Empleado"/>
+            <ListBoxItem Content="Cerrar Sesión"/>
+        </Menu>
+
+    </Grid>
+</Window>
