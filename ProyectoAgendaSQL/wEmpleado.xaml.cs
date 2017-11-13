@@ -51,8 +51,8 @@ namespace ProyectoAgendaSQL
                     empleado.Telefono = txtTelefono.Text;
                     empleado.Fax = txtFax.Text;
                     empleado.Email = txtEmail.Text;
-                    empleado.Departamento = listaDepartamentos.ElementAt(cmbDepartamento.SelectedIndex);
-                    empleado.Sucursal = listaSucursales.ElementAt(cmbSucursal.SelectedIndex); ;
+                    empleado.Departamento = (Departamento)listaDepartamentos.ElementAt(cmbDepartamento.SelectedIndex);
+                    empleado.Sucursal = (Sucursal)listaSucursales.ElementAt(cmbSucursal.SelectedIndex); ;
                     empleado.Usuario = txtUsuario.Text;
                     empleado.Password = txtPassword.Password;
                     DBAgenda.AgregarEmpleado(empleado);
