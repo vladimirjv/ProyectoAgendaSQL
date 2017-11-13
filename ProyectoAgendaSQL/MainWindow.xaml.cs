@@ -23,8 +23,36 @@ namespace ProyectoAgendaSQL
         public MainWindow()
         {
             InitializeComponent();
+            DBAgenda.DBConectar();
         }
 
-        
+        private void btnAccederLogin_Click(object sender, RoutedEventArgs e)
+        {
+            
+            List<Empleado> userEmpleadoLogIn = DBAgenda.MatchUsuarioEmpleado(txtUsuario.Text);  //Busca un empleado
+
+            if (userEmpleadoLogIn.Count == 0)
+            {
+                List<Administrador> userAdministradorLogIn = DBAgenda.MatchUsuarioAdministrador(txtUsuario.Text);  //Busca un administrador
+                if (userAdministradorLogIn.Count == 0)
+                {
+                    MessageBox.Show("User No Encontrado");
+                }
+                else
+                {
+                    if (userAdministradorLogIn.ElementAt(0).Password == txtPassword.Password)
+                        (new wEmpleado()).Show();
+                    else
+                        MessageBox.Show("Contraseña Admin Incorrecta");
+                }
+            }
+            else {
+                if (userEmpleadoLogIn.ElementAt(0).Password == txtPassword.Password)
+                    (new wEmpleado()).Show();
+                else
+                    MessageBox.Show("Contraseña Empleado Incorrecta");
+            }
+        }
+
     }
 }
