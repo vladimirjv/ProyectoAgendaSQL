@@ -16,6 +16,8 @@ namespace ProyectoAgendaSQL
             conexion.Open();
         }
 
+        ////////////////////
+        //log-in's
         public static List<Empleado> MatchUsuarioEmpleado(string userEmpleado)
         {
             List<Empleado> listaUserEmpleado = new List<Empleado>();
@@ -175,6 +177,12 @@ namespace ProyectoAgendaSQL
 
             reader.Close();
             return listaEmpleados;
+        }
+
+        public static List<Empleado> BuscarEmpleados()
+        {
+            List<Empleado> lista = new List<Empleado>();
+            return lista;
         }
 
     }
