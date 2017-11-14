@@ -95,7 +95,7 @@ namespace ProyectoAgendaSQL
 
         /////////////////////////////////////////////////////////////////////////////
         //problemas con el DataReader
-
+        /*
         public static Departamento BusquedaIdDepartamento(int id)
         {
             Departamento buscado;
@@ -116,7 +116,7 @@ namespace ProyectoAgendaSQL
             buscado = new Sucursal(id, reader.GetString(1), reader.GetString(2));
             reader.Close();
             return buscado;
-        }
+        }*/
 
         //primer metodo que llama al buscar
         //se abre el primer DataReader y al entrar en la función BusquedaIdDepartamento 
