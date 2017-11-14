@@ -29,6 +29,11 @@ namespace ProyectoAgendaSQL
             set { descripcion = value; }
         }
 
+        public Departamento()
+        {
+                
+        }
+
         public Departamento(int id, string nombre)
         {
             this.id = id;

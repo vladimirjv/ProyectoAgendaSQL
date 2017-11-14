@@ -28,6 +28,10 @@ namespace ProyectoAgendaSQL
             get { return descripcion; }
             set { descripcion = value; }
         }
+        public Sucursal()
+        {
+
+        }
 
         public Sucursal(int id, string nombre)
         {

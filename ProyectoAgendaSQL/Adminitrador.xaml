@@ -17,14 +17,14 @@
             <TextBox x:Name="txtDepartamentoNombre" HorizontalAlignment="Left" Height="22" Margin="144,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221"/>
             <TextBox x:Name="txtDepartamentoDescripcion" HorizontalAlignment="Left" Height="95" Margin="144,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221"/>
         </Grid>
-        <Button x:Name="btnAgregarDepartamento" Content="Agregar" HorizontalAlignment="Left" Height="40" Margin="537,324,0,0" VerticalAlignment="Top" Width="114" FontSize="20"/>
+        <Button x:Name="btnAgregarDepartamento" Content="Agregar" HorizontalAlignment="Left" Height="40" Margin="537,324,0,0" VerticalAlignment="Top" Width="114" FontSize="20" Click="btnAgregarDepartamento_Click"/>
         <Grid HorizontalAlignment="Left" Height="192" Margin="109,499,0,0" VerticalAlignment="Top" Width="600" Background="#FFECE8E8">
             <Label Content="Sucursal" HorizontalAlignment="Left" Height="29" Margin="77,28,0,0" VerticalAlignment="Top" Width="61" FontSize="14"/>
             <Label Content="Descripción" HorizontalAlignment="Left" Height="31" Margin="56,74,0,0" VerticalAlignment="Top" Width="82" FontSize="14"/>
             <TextBox x:Name="txtSucursalNombre" HorizontalAlignment="Left" Height="22" Margin="144,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221"/>
             <TextBox x:Name="txtSucursalDescripcion" HorizontalAlignment="Left" Height="95" Margin="144,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221"/>
         </Grid>
-        <Button x:Name="btnAgregarSucursal" Content="Agregar" HorizontalAlignment="Left" Height="40" Margin="537,543,0,0" VerticalAlignment="Top" Width="114" FontSize="20"/>
+        <Button x:Name="btnAgregarSucursal" Content="Agregar" HorizontalAlignment="Left" Height="40" Margin="537,543,0,0" VerticalAlignment="Top" Width="114" FontSize="20" Click="btnAgregarSucursal_Click"/>
 
     </Grid>
 </Window>

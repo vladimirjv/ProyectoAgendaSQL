@@ -39,6 +39,37 @@ namespace ProyectoAgendaSQL
             }
         }
 
+        private void btnAgregarDepartamento_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Departamento departamento = new Departamento();
+                departamento.Nombre = txtDepartamentoNombre.Text;
+                departamento.Descripcion = txtDepartamentoDescripcion.Text;
+                DBAgenda.AgregarDepartamento(departamento);
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Revise Su información");
+            }
+        }
+
+        private void btnAgregarSucursal_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Sucursal sucursal = new Sucursal();
+                sucursal.Nombre = txtSucursalNombre.Text;
+                sucursal.Descripcion = txtSucursalNombre.Text;
+                DBAgenda.AgregarSucursal(sucursal);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Revise su información");
+            }
+        }
+
 
     }
 }
