@@ -54,6 +54,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Administrador.cs" />
+    <Compile Include="Adminitrador.xaml.cs">
+      <DependentUpon>Adminitrador.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Departamento.cs" />
     <Compile Include="Empleado.cs" />
     <Compile Include="Inicio.xaml.cs">
@@ -63,6 +66,10 @@
     <Compile Include="wEmpleado.xaml.cs">
       <DependentUpon>wEmpleado.xaml</DependentUpon>
     </Compile>
+    <Page Include="Adminitrador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Inicio.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

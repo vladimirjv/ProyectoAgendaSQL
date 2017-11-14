@@ -28,6 +28,10 @@ namespace ProyectoAgendaSQL
             get { return password; }
             set { password = value; }
         }
+        public Administrador()
+        {
+
+        }
 
         public Administrador(int id, string usuario, string password)
         {

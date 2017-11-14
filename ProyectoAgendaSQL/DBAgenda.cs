@@ -51,7 +51,8 @@ namespace ProyectoAgendaSQL
             reader.Close();
             return listaUserAdministrador;
         }
-
+        ///////////////////////////////////////////////////////////////////
+        //Metodos para agregar
         public static int AgregarEmpleado(Empleado empleado)
         {
             int filasAfectadas = 0;
@@ -61,6 +62,34 @@ namespace ProyectoAgendaSQL
             return filasAfectadas;
         }
 
+        public static int AgregarAdministrador(Administrador administrador)
+        {
+            int filasAfectadas = 0;
+            string query = string.Format("INSERT INTO Administrador (Usuario, Password) VALUES ('{0}', '{1}')",administrador.Usuario, administrador.Password);
+            SqlCommand comando = new SqlCommand(query, conexion);
+            filasAfectadas = comando.ExecuteNonQuery();
+            return filasAfectadas;
+        }
+
+        public static int AgregarDepartamento(Departamento departamento)
+        {
+            int filasAfectadas = 0;
+            string query = string.Format("INSERT INTO Departamento (Nombre, Descripcion) VALUES ('{0}', '{1}')", departamento.Nombre,departamento.Descripcion);
+            SqlCommand comando = new SqlCommand(query, conexion);
+            filasAfectadas = comando.ExecuteNonQuery();
+            return filasAfectadas;
+        }
+
+        public static int AgregarSucursal(Sucursal sucursal)
+        {
+            int filasAfectadas = 0;
+            string query = string.Format("INSERT INTO Sucursal (Nombre, Descripcion) VALUES ('{0}', '{1}')", sucursal.Nombre,sucursal.Descripcion);
+            SqlCommand comando = new SqlCommand(query, conexion);
+            filasAfectadas = comando.ExecuteNonQuery();
+            return filasAfectadas;
+        }
+
+        /////////////////////////////////////////////////////////////////////
         public static List<Departamento> listaDepartamentos()
         {
             List<Departamento> listaDepartamentos = new List<Departamento>();
