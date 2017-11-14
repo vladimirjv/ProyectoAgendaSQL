@@ -23,5 +23,22 @@ namespace ProyectoAgendaSQL
         {
             InitializeComponent();
         }
+
+        private void btmAgregarAdministrador_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Administrador administrador = new Administrador();
+                administrador.Usuario = txtAdministradorUser.Text;
+                administrador.Password = (string)pswAdministrador.Password;
+                DBAgenda.AgregarAdministrador(administrador);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Revise su Información");
+            }
+        }
+
+
     }
 }

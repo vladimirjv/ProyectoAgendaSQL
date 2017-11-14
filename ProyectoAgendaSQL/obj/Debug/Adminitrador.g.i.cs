@@ -149,6 +149,12 @@ namespace ProyectoAgendaSQL {
             return;
             case 3:
             this.btmAgregarAdministrador = ((System.Windows.Controls.Button)(target));
+            
+            #line 13 "..\..\Adminitrador.xaml"
+            this.btmAgregarAdministrador.Click += new System.Windows.RoutedEventHandler(this.btmAgregarAdministrador_Click);
+            
+            #line default
+            #line hidden
             return;
             case 4:
             this.txtDepartamentoNombre = ((System.Windows.Controls.TextBox)(target));

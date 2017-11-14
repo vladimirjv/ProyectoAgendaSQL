@@ -10,7 +10,7 @@
             <TextBox x:Name="txtAdministradorUser" HorizontalAlignment="Left" Height="22" Margin="144,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221"/>
             <PasswordBox x:Name="pswAdministrador" HorizontalAlignment="Left" Height="23" Margin="144,74,0,0" VerticalAlignment="Top" Width="221"/>
         </Grid>
-        <Button x:Name="btmAgregarAdministrador" Content="Agregar" HorizontalAlignment="Left" Height="40" Margin="537,162,0,0" VerticalAlignment="Top" Width="114" FontSize="20"/>
+        <Button x:Name="btmAgregarAdministrador" Content="Agregar" HorizontalAlignment="Left" Height="40" Margin="537,162,0,0" VerticalAlignment="Top" Width="114" FontSize="20" Click="btmAgregarAdministrador_Click"/>
         <Grid HorizontalAlignment="Left" Height="192" Margin="109,280,0,0" VerticalAlignment="Top" Width="600" Background="#FFECE8E8">
             <Label Content="Departamento" HorizontalAlignment="Left" Height="29" Margin="38,25,0,0" VerticalAlignment="Top" Width="100" FontSize="14"/>
             <Label Content="Descripción" HorizontalAlignment="Left" Height="31" Margin="56,74,0,0" VerticalAlignment="Top" Width="82" FontSize="14"/>
