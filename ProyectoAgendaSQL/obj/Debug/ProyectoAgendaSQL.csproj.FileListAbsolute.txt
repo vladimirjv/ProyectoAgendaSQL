@@ -30,3 +30,5 @@ C:\Users\B6-JU\documents\visual studio 2013\Projects\ProyectoAgendaSQL\ProyectoA
 C:\Users\B6-JU\documents\visual studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.csproj.GenerateResource.Cache
 C:\Users\B6-JU\documents\visual studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\Inicio.baml
 C:\Users\B6-JU\documents\visual studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\Inicio.g.cs
+C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\Inicio.baml
+C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\Inicio.g.cs
