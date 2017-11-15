@@ -16,6 +16,8 @@ namespace ProyectoAgendaSQL
             conexion.Open();
         }
 
+        ////////////////////
+        //log-in's
         public static List<Empleado> MatchUsuarioEmpleado(string userEmpleado)
         {
             List<Empleado> listaUserEmpleado = new List<Empleado>();
@@ -51,7 +53,8 @@ namespace ProyectoAgendaSQL
             reader.Close();
             return listaUserAdministrador;
         }
-
+        ///////////////////////////////////////////////////////////////////
+        //Metodos para agregar
         public static int AgregarEmpleado(Empleado empleado)
         {
             int filasAfectadas = 0;
@@ -61,6 +64,34 @@ namespace ProyectoAgendaSQL
             return filasAfectadas;
         }
 
+        public static int AgregarAdministrador(Administrador administrador)
+        {
+            int filasAfectadas = 0;
+            string query = string.Format("INSERT INTO Administrador (Usuario, Password) VALUES ('{0}', '{1}')",administrador.Usuario, administrador.Password);
+            SqlCommand comando = new SqlCommand(query, conexion);
+            filasAfectadas = comando.ExecuteNonQuery();
+            return filasAfectadas;
+        }
+
+        public static int AgregarDepartamento(Departamento departamento)
+        {
+            int filasAfectadas = 0;
+            string query = string.Format("INSERT INTO Departamento (Nombre, Descripcion) VALUES ('{0}', '{1}')", departamento.Nombre,departamento.Descripcion);
+            SqlCommand comando = new SqlCommand(query, conexion);
+            filasAfectadas = comando.ExecuteNonQuery();
+            return filasAfectadas;
+        }
+
+        public static int AgregarSucursal(Sucursal sucursal)
+        {
+            int filasAfectadas = 0;
+            string query = string.Format("INSERT INTO Sucursal (Nombre, Descripcion) VALUES ('{0}', '{1}')", sucursal.Nombre,sucursal.Descripcion);
+            SqlCommand comando = new SqlCommand(query, conexion);
+            filasAfectadas = comando.ExecuteNonQuery();
+            return filasAfectadas;
+        }
+
+        /////////////////////////////////////////////////////////////////////
         public static List<Departamento> listaDepartamentos()
         {
             List<Departamento> listaDepartamentos = new List<Departamento>();
@@ -95,7 +126,7 @@ namespace ProyectoAgendaSQL
 
         /////////////////////////////////////////////////////////////////////////////
         //problemas con el DataReader
-
+        /*
         public static Departamento BusquedaIdDepartamento(int id)
         {
             Departamento buscado;
@@ -116,7 +147,7 @@ namespace ProyectoAgendaSQL
             buscado = new Sucursal(id, reader.GetString(1), reader.GetString(2));
             reader.Close();
             return buscado;
-        }
+        }*/
 
         //primer metodo que llama al buscar
         //se abre el primer DataReader y al entrar en la función BusquedaIdDepartamento 
@@ -147,5 +178,15 @@ namespace ProyectoAgendaSQL
             reader.Close();
             return listaEmpleados;
         }
+<<<<<<< HEAD
+=======
+
+        public static List<Empleado> BuscarEmpleados()
+        {
+            List<Empleado> lista = new List<Empleado>();
+            return lista;
+        }
+
+>>>>>>> ba7806578476e7ab893fb995f2a65190a7bebd4e
     }
 }
