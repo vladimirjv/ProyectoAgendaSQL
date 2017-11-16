@@ -4,15 +4,26 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
+C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\
+=======
 C:\Users\B6-JU\documents\visual studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\
+>>>>>>> ba7806578476e7ab893fb995f2a65190a7bebd4e
 ProyectoAgendaSQL
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
+C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\App.xaml
+3867065493
+
+16-738362845
+=======
 C:\Users\B6-JU\documents\visual studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\App.xaml
 52113168167
 
 18-245285751
+>>>>>>> ba7806578476e7ab893fb995f2a65190a7bebd4e
 12-1401562060
 Adminitrador.xaml;Inicio.xaml;MainWindow.xaml;wConsulta.xaml;wEmpleado.xaml;
 

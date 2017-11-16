@@ -13,7 +13,7 @@ namespace ProyectoAgendaSQL
         static SqlConnection conexion;
         public static void DBConectar()
         {
-            conexion = new SqlConnection("Data Source=LAPTOP-Q2ET4LU7\\SQLEXPRESS;Initial Catalog=AgendaEmpresarial;Integrated Security=True;Pooling=False");
+            conexion = new SqlConnection("Data Source=LAPTOP-7JPH5U2H\\SQLExpress;Initial Catalog=DB_Agenda;Integrated Security=True");
             conexion.Open();
         }
 
@@ -179,6 +179,8 @@ namespace ProyectoAgendaSQL
             reader.Close();
             return listaEmpleados;
         }
+<<<<<<< HEAD
+=======
 
         public static List<Empleado> ConsultaEmpleadosConNombre(string nombre, string departamento, string sucursal)
         {
@@ -228,5 +230,6 @@ namespace ProyectoAgendaSQL
             return empleados;
         }
 
+>>>>>>> ba7806578476e7ab893fb995f2a65190a7bebd4e
     }
 }

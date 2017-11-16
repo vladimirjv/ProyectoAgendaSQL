@@ -30,7 +30,12 @@ C:\Users\B6-JU\documents\visual studio 2013\Projects\ProyectoAgendaSQL\ProyectoA
 C:\Users\B6-JU\documents\visual studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.csproj.GenerateResource.Cache
 C:\Users\B6-JU\documents\visual studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\Inicio.baml
 C:\Users\B6-JU\documents\visual studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\Inicio.g.cs
+<<<<<<< HEAD
 C:\Users\B6-JU\documents\visual studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\Adminitrador.baml
 C:\Users\B6-JU\documents\visual studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\wConsulta.baml
 C:\Users\B6-JU\documents\visual studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\Adminitrador.g.cs
 C:\Users\B6-JU\documents\visual studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\wConsulta.g.cs
+=======
+C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\Inicio.baml
+C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\Inicio.g.cs
+>>>>>>> e3063230041e0731384200b08c42520d89150bfa
