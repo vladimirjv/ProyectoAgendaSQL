@@ -56,6 +56,7 @@ namespace ProyectoAgendaSQL
                     empleado.Usuario = txtUsuario.Text;
                     empleado.Password = txtPassword.Password;
                     DBAgenda.AgregarEmpleado(empleado);
+                    
 
                     MessageBox.Show("Registro Añadido con Exito :)");
                 }
@@ -108,6 +109,16 @@ namespace ProyectoAgendaSQL
                 }
             }
             catch (Exception) { }
+        }
+
+        private void btnModificar_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        {
+            (new Inicio()).Show();
+            this.Close();
         }
     }
 }

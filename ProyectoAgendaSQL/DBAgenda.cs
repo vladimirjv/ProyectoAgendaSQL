@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace ProyectoAgendaSQL
 {
@@ -126,14 +127,14 @@ namespace ProyectoAgendaSQL
 
         /////////////////////////////////////////////////////////////////////////////
         //problemas con el DataReader
-        /*
-        public static Departamento BusquedaIdDepartamento(int id)
+        
+        public static Departamento BusquedaIdDepartamento(string departamento)
         {
             Departamento buscado;
-            string consulta = string.Format("SELECT * FROM Departameto WHERE Id='{0}'", id);
+            string consulta = string.Format("SELECT * FROM Departameto WHERE Nombre='{0}'", departamento);
             SqlCommand comando = new SqlCommand(consulta, conexion);
             SqlDataReader reader = comando.ExecuteReader();
-            buscado = new Departamento(id, reader.GetString(1), reader.GetString(2));
+            buscado = new Departamento(reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
             reader.Close();
             return buscado;
         }
@@ -147,7 +148,7 @@ namespace ProyectoAgendaSQL
             buscado = new Sucursal(id, reader.GetString(1), reader.GetString(2));
             reader.Close();
             return buscado;
-        }*/
+        }
 
         //primer metodo que llama al buscar
         //se abre el primer DataReader y al entrar en la función BusquedaIdDepartamento 
@@ -179,10 +180,52 @@ namespace ProyectoAgendaSQL
             return listaEmpleados;
         }
 
-        public static List<Empleado> BuscarEmpleados()
+        public static List<Empleado> ConsultaEmpleadosConNombre(string nombre, string departamento, string sucursal)
         {
-            List<Empleado> lista = new List<Empleado>();
-            return lista;
+            List<Empleado> empleados = new List<Empleado>();
+            MessageBox.Show(departamento + sucursal);
+            string query = string.Format("SELECT E.Id, E.Nombre, E.Telefono, E.Fax, E.Email, D.Nombre, S.Nombre, E.Departamento, E.Sucursal  FROM [Empleado] E JOIN Departamento D ON E.Departamento = D.Id JOIN Sucursal S ON E.Sucursal = S.Id WHERE E.Nombre LIKE '%{0}%' AND D.Nombre LIKE '%{1}%' AND S.Nombre LIKE '%{2}%'", nombre,departamento,sucursal);
+            SqlCommand comando = new SqlCommand(query, conexion);
+            SqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Empleado aux = new Empleado();
+                aux.Id = reader.GetInt32(0);
+                aux.Nombre = reader.GetString(1);
+                aux.Telefono = reader.GetString(2);
+                aux.Fax = reader.GetString(3);
+                aux.Email = reader.GetString(4);
+                aux.Departamento = new Departamento(reader.GetInt32(7), reader.GetString(5));
+                aux.Sucursal = new Sucursal(reader.GetInt32(8), reader.GetString(6));
+                empleados.Add(aux);
+            }
+            reader.Close();
+            return empleados;
+        }
+
+        public static List<Empleado> ConsultaEmpleadosSinNombre(string departamento, string sucursal)
+        {
+            List<Empleado> empleados = new List<Empleado>();
+            string query = string.Format("SELECT E.Id, E.Nombre, E.Telefono, E.Fax, E.Email, D.Nombre, S.Nombre, E.Departamento, E.Sucursal  FROM [Empleado] E JOIN Departamento D ON E.Departamento = D.Id JOIN Sucursal S ON E.Sucursal = S.Id WHERE D.Nombre LIKE '%{0}%' AND S.Nombre LIKE '%{1}%'",  departamento, sucursal);
+            SqlCommand comando = new SqlCommand(query, conexion);
+            SqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Empleado aux = new Empleado();
+                aux.Id = reader.GetInt32(0);
+                aux.Nombre = reader.GetString(1);
+                aux.Telefono = reader.GetString(2);
+                aux.Fax = reader.GetString(3);
+                aux.Email = reader.GetString(4);
+                aux.Departamento = new Departamento(reader.GetInt32(7), reader.GetString(5));
+                aux.Sucursal = new Sucursal(reader.GetInt32(8), reader.GetString(6));
+                empleados.Add(aux);
+            }
+
+            reader.Close();
+            return empleados;
         }
 
     }

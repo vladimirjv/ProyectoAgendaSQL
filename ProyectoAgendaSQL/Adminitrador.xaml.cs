@@ -46,6 +46,10 @@ namespace ProyectoAgendaSQL
                 Departamento departamento = new Departamento();
                 departamento.Nombre = txtDepartamentoNombre.Text;
                 departamento.Descripcion = txtDepartamentoDescripcion.Text;
+                if (departamento.Descripcion==null)
+                {
+                    departamento.Descripcion = "";
+                }
                 DBAgenda.AgregarDepartamento(departamento);
 
             }
@@ -62,12 +66,22 @@ namespace ProyectoAgendaSQL
                 Sucursal sucursal = new Sucursal();
                 sucursal.Nombre = txtSucursalNombre.Text;
                 sucursal.Descripcion = txtSucursalNombre.Text;
+                if (sucursal.Descripcion==null)
+                {
+                    sucursal.Descripcion = "";
+                }
                 DBAgenda.AgregarSucursal(sucursal);
             }
             catch (Exception)
             {
                 MessageBox.Show("Revise su información");
             }
+        }
+
+        private void btnRegresar_Click(object sender, RoutedEventArgs e)
+        {
+            (new Inicio()).Show();
+            this.Close();
         }
 
 

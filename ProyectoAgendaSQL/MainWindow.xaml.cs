@@ -40,17 +40,24 @@ namespace ProyectoAgendaSQL
                 }
                 else
                 {
-                    if (userAdministradorLogIn.ElementAt(0).Password == txtPassword.Password)
-                        (new wEmpleado()).Show();
+                    if (userAdministradorLogIn.ElementAt(0).Password == txtPassword.Password){
+                        (new Inicio()).Show();
+                        this.Close();
+                    }
                     else
                         MessageBox.Show("Contraseña Admin Incorrecta");
                 }
             }
             else {
                 if (userEmpleadoLogIn.ElementAt(0).Password == txtPassword.Password)
-                    (new wEmpleado()).Show();
+                {
+                    (new Inicio()).Show();
+                    this.Close();
+                }
                 else
+                {
                     MessageBox.Show("Contraseña Empleado Incorrecta");
+                }
             }
         }
 

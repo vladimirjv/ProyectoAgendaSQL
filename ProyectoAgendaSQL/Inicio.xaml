@@ -5,11 +5,11 @@
     <Grid>
         <Image HorizontalAlignment="Left" Height="308" Margin="76,74,0,0" VerticalAlignment="Top" Width="482" Source="Sources/ivin.jpg" Stretch="UniformToFill"/>
         <Menu HorizontalAlignment="Left" Height="237" Margin="27,50,0,0" VerticalAlignment="Top" Width="104">
-            <ListBoxItem Content="Inicio"/>
-            <ListBoxItem Content="Administrador"/>
-            <ListBoxItem Content="Consultas"/>
-            <ListBoxItem Content="Empleado"/>
-            <ListBoxItem Content="Cerrar Sesión"/>
+            <ListBoxItem x:Name="itemInicio" Content="Inicio" Width="94"/>
+            <ListBoxItem x:Name="itemAdmin" Content="Administrador" Width="94" MouseDoubleClick="itemAdmin_MouseDoubleClick"/>
+            <ListBoxItem x:Name="itemConsultas" Content="Consultas" Width="94" MouseDoubleClick="itemConsultas_MouseDoubleClick"/>
+            <ListBoxItem x:Name="itemEmpleado" Content="Empleado" MouseDoubleClick="itemEmpleado_MouseDoubleClick" Width="94"/>
+            <ListBoxItem x:Name="CerrarSeción" Content="Cerrar Sesión" Width="94" MouseDoubleClick="CerrarSeción_MouseDoubleClick"/>
         </Menu>
 
     </Grid>
