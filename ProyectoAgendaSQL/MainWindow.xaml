@@ -1,7 +1,7 @@
 ﻿<Window x:Class="ProyectoAgendaSQL.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="286.233" Width="449">
+        Title="LogIn" Height="286.233" Width="449" ResizeMode="NoResize">
     <Grid>
         <Label Content="Bienvenido &#x9;  |          Corporativo IVIN" HorizontalAlignment="Left" Height="36" Margin="43,10,0,0" VerticalAlignment="Top" Width="353" FontFamily="XOUMEG S57" FontSize="20" Cursor="None" FontWeight="Bold"/>
         <Grid HorizontalAlignment="Left" Height="152" Margin="43,66,0,0" VerticalAlignment="Top" Width="353" Background="#FFECEAEA">

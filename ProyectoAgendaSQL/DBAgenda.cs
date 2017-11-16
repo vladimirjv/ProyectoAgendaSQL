@@ -179,8 +179,6 @@ namespace ProyectoAgendaSQL
             reader.Close();
             return listaEmpleados;
         }
-<<<<<<< HEAD
-=======
 
         public static List<Empleado> ConsultaEmpleadosConNombre(string nombre, string departamento, string sucursal)
         {
@@ -229,7 +227,5 @@ namespace ProyectoAgendaSQL
             reader.Close();
             return empleados;
         }
-
->>>>>>> ba7806578476e7ab893fb995f2a65190a7bebd4e
     }
 }
