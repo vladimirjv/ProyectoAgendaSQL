@@ -1,15 +1,15 @@
 ﻿<Window x:Name="Bienvenida" x:Class="ProyectoAgendaSQL.Inicio"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Inicio" Height="498.701" Width="600">
+        Title="Inicio" Height="498.701" Width="600" ResizeMode="NoResize">
     <Grid>
         <Image HorizontalAlignment="Left" Height="308" Margin="76,74,0,0" VerticalAlignment="Top" Width="482" Source="Sources/ivin.jpg" Stretch="UniformToFill"/>
         <Menu HorizontalAlignment="Left" Height="237" Margin="27,50,0,0" VerticalAlignment="Top" Width="104">
             <ListBoxItem x:Name="itemInicio" Content="Inicio" Width="94"/>
-            <ListBoxItem x:Name="itemAdmin" Content="Administrador" Width="94" MouseDoubleClick="itemAdmin_MouseDoubleClick"/>
-            <ListBoxItem x:Name="itemConsultas" Content="Consultas" Width="94" MouseDoubleClick="itemConsultas_MouseDoubleClick"/>
-            <ListBoxItem x:Name="itemEmpleado" Content="Empleado" MouseDoubleClick="itemEmpleado_MouseDoubleClick" Width="94"/>
-            <ListBoxItem x:Name="CerrarSeción" Content="Cerrar Sesión" Width="94" MouseDoubleClick="CerrarSeción_MouseDoubleClick"/>
+            <ListBoxItem x:Name="itemAdmin" Content="Administrador" Width="94" MouseLeftButtonUp="itemAdmin_MouseLeftButtonUp"/>
+            <ListBoxItem x:Name="itemConsultas" Content="Consultas" Width="94" MouseLeftButtonUp="itemConsultas_MouseLeftButtonUp"/>
+            <ListBoxItem x:Name="itemEmpleado" Content="Empleado" Width="94" MouseLeftButtonUp="itemEmpleado_MouseLeftButtonUp"/>
+            <ListBoxItem x:Name="CerrarSeción" Content="Cerrar Sesión" Width="94" MouseLeftButtonUp="CerrarSeción_MouseLeftButtonUp"/>
         </Menu>
 
     </Grid>

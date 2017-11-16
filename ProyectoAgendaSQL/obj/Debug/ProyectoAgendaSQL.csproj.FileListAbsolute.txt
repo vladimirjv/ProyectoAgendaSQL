@@ -18,3 +18,24 @@ C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoA
 C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.csproj.GenerateResource.Cache
 C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.exe
 C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.pdb
+C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\bin\Debug\ProyectoAgendaSQL.exe.config
+C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.exe
+C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.pdb
+C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\bin\Debug\ProyectoAgendaSQL.exe
+C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\bin\Debug\ProyectoAgendaSQL.pdb
+C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.csprojResolveAssemblyReference.cache
+C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\Adminitrador.baml
+C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\Inicio.baml
+C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\MainWindow.baml
+C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\wConsulta.baml
+C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\wEmpleado.baml
+C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\Adminitrador.g.cs
+C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\Inicio.g.cs
+C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\MainWindow.g.cs
+C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\wConsulta.g.cs
+C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\wEmpleado.g.cs
+C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\App.g.cs
+C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL_MarkupCompile.cache
+C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.g.resources
+C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.Properties.Resources.resources
+C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.csproj.GenerateResource.Cache
