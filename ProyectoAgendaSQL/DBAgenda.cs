@@ -13,7 +13,7 @@ namespace ProyectoAgendaSQL
         static SqlConnection conexion;
         public static void DBConectar()
         {
-            conexion = new SqlConnection("Data Source=LAPTOP-7JPH5U2H\\SQLExpress;Initial Catalog=DB_Agenda;Integrated Security=True");
+            conexion = new SqlConnection("Data Source=LAPTOP-Q2ET4LU7\\SQLEXPRESS;Initial Catalog=AgendaEmpresarial;Integrated Security=True");
             conexion.Open();
         }
 

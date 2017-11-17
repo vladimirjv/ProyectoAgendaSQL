@@ -24,34 +24,36 @@ namespace ProyectoAgendaSQL
             InitializeComponent();
         }
 
-        private void ListBoxItem_Selected(object sender, RoutedEventArgs e)
-        {
 
-        }
+        
 
-        private void itemEmpleado_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            (new wEmpleado()).Show();
-            this.Close();
-        }
-
-        private void itemAdmin_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void itemAdmin_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             (new Adminitrador()).Show();
             this.Close();
         }
 
-        private void itemConsultas_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void itemConsultas_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             (new wConsulta()).Show();
             this.Close();
         }
 
-        private void CerrarSeción_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void itemEmpleado_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            (new wEmpleado()).Show();
+            this.Close();
+        }
+
+        private void CerrarSeción_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             (new MainWindow()).Show();
             this.Close();
         }
+
+        
+
+        
 
         
     }
