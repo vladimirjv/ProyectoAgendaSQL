@@ -12,10 +12,10 @@
                 </LinearGradientBrush>
             </Grid.Background>
             <Label Content="Usuario:" HorizontalAlignment="Left" Height="40" Margin="10,18,0,0" VerticalAlignment="Top" Width="77" FontFamily="Oswald SemiBold" FontWeight="Bold" RenderTransformOrigin="-0.115,-1.225" FontSize="16"/>
-            <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="26" Margin="101,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="223" FontSize="16" Text="Admin" MaxLength="10" Opacity="0.9"/>
+            <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="26" Margin="101,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="223" FontSize="16" Text="" MaxLength="10" Opacity="0.9"/>
             <Label Content="Password:" HorizontalAlignment="Left" Height="36" Margin="10,64,0,0" VerticalAlignment="Top" Width="86" FontFamily="Oswald SemiBold" FontWeight="Bold" RenderTransformOrigin="-0.115,-1.225" FontSize="16"/>
             <Button x:Name="btnAccederLogin" Content="Acceder" HorizontalAlignment="Left" Height="29" Margin="101,108,0,0" VerticalAlignment="Top" Width="146" FontSize="16" Click="btnAccederLogin_Click"/>
-            <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="101,65,0,0" VerticalAlignment="Top" Width="223" FontSize="16" Password="Admin" MaxLength="8" Opacity="0.9" Height="26" KeyDown="txtPassword_KeyDown"/>
+            <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="101,65,0,0" VerticalAlignment="Top" Width="223" FontSize="16" Password="" MaxLength="8" Opacity="0.9" Height="26" KeyDown="txtPassword_KeyDown"/>
         </Grid>
     </Grid>
 </Window>

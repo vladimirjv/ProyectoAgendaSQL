@@ -1,7 +1,7 @@
 ﻿<Window x:Class="ProyectoAgendaSQL.Adminitrador"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Name="wAdministrador" Title="Adminitrador" Height="571.731" Width="714.112" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closed="wAdministrador_Closed">
+        Name="wAdministrador" Title="Agenda | Administrador" Height="571.731" Width="714.112" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closed="wAdministrador_Closed" Icon="Sources/guia-telefonica.png">
     <Grid>
         <Label Content="Panel de Administradores" HorizontalAlignment="Center" Height="66" Margin="10,10,0,0" VerticalAlignment="Top" Width="688" FontSize="30" HorizontalContentAlignment="Center"/>
         <Grid HorizontalAlignment="Left" Height="95" Margin="51,74,0,0" VerticalAlignment="Top" Width="600" Background="#FFECE8E8">

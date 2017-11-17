@@ -1,7 +1,7 @@
 ﻿<Window x:Class="ProyectoAgendaSQL.wEmpleado"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Name="wEmpleados" Title="wEmpleado" Height="518.403" Width="755.224" Loaded="Window_Loaded" ResizeMode="NoResize" Icon="Sources/guia-telefonica.png" WindowStartupLocation="CenterScreen" Closed="wEmpleados_Closed">
+        Name="wEmpleados" Title="Agenda | Empleados" Height="518.403" Width="755.224" Loaded="Window_Loaded" ResizeMode="NoResize" Icon="Sources/guia-telefonica.png" WindowStartupLocation="CenterScreen" Closed="wEmpleados_Closed">
     <Grid>
         <Label Content="Agenda Empleados" HorizontalAlignment="Left" Margin="252,10,0,0" VerticalAlignment="Top" FontSize="22"/>
         <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="26" Margin="139,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="290" FontSize="15" Cursor="IBeam" MaxLength="40"/>

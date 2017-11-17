@@ -33,28 +33,11 @@ namespace ProyectoAgendaSQL
             cmbBoxSucursal.DisplayMemberPath = "Nombre";
             cmbBoxSucursal.Items.Refresh();
             cmbBoxSucursal.SelectedIndex = 0;
-
         }
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
-
 
         private void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
-            if (cbSinNombre.IsChecked==true)
-            {
-                empleado = DBAgenda.ConsultaEmpleadosSinNombre(((Departamento)cmbDepartamento.SelectedItem).Nombre, ((Sucursal)cmbBoxSucursal.SelectedItem).Nombre);
-                listviewConsulta.ItemsSource = empleado;
-                listviewConsulta.Items.Refresh();
-            }
-            else 
-            {
-                empleado = DBAgenda.ConsultaEmpleadosConNombre(txtNombre.Text,((Departamento)cmbDepartamento.SelectedItem).Nombre,((Sucursal)cmbBoxSucursal.SelectedItem).Nombre);
-                listviewConsulta.ItemsSource = empleado;
-                listviewConsulta.Items.Refresh();
-            }
+            ejecutarConsulta();
         }
 
         private void btnCerrarBusqueda_Click(object sender, RoutedEventArgs e)
@@ -65,6 +48,38 @@ namespace ProyectoAgendaSQL
         private void winConsulta_Closed(object sender, EventArgs e)
         {
             MainWindow.inicio.Show();
+        }
+
+        private void ejecutarConsulta()
+        {
+            if (cbSinNombre.IsChecked == true)
+            {
+                empleado = DBAgenda.ConsultaEmpleadosSinNombre(((Departamento)cmbDepartamento.SelectedItem).Nombre, ((Sucursal)cmbBoxSucursal.SelectedItem).Nombre);
+                listviewConsulta.ItemsSource = empleado;
+                listviewConsulta.Items.Refresh();
+            }
+            else
+            {
+                empleado = DBAgenda.ConsultaEmpleadosConNombre(txtNombre.Text, ((Departamento)cmbDepartamento.SelectedItem).Nombre, ((Sucursal)cmbBoxSucursal.SelectedItem).Nombre);
+                listviewConsulta.ItemsSource = empleado;
+                listviewConsulta.Items.Refresh();
+            }
+        }
+
+        private void txtNombre_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                ejecutarConsulta();
+            }
+        }
+
+        private void cbSinNombre_Click(object sender, RoutedEventArgs e)
+        {
+            if (cbSinNombre.IsChecked == true)
+                txtNombre.IsEnabled = false;
+            else
+                txtNombre.IsEnabled = true;
         }
     }
 }

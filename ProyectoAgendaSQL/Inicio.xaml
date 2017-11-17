@@ -1,7 +1,7 @@
 ﻿<Window x:Name="wInicio" x:Class="ProyectoAgendaSQL.Inicio"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Inicio" Height="319.596" Width="573.134" ResizeMode="NoResize" Icon="Sources/guia-telefonica.png" WindowStartupLocation="CenterScreen">
+        Title="Agenda | Inicio" Height="319.596" Width="573.134" ResizeMode="NoResize" Icon="Sources/guia-telefonica.png" WindowStartupLocation="CenterScreen">
     <Grid>
         <Image HorizontalAlignment="Left" Height="281" Margin="109,-16,0,0" VerticalAlignment="Top" Width="458" Source="Sources/ivin.jpg" Stretch="UniformToFill"/>
         <Menu Name="menu" HorizontalAlignment="Left" Height="291" VerticalAlignment="Top" Width="104">
