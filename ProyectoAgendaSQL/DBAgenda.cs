@@ -13,7 +13,7 @@ namespace ProyectoAgendaSQL
         static SqlConnection conexion;
         public static void DBConectar()
         {
-            conexion = new SqlConnection("Data Source=LAPTOP-Q2ET4LU7\\SQLEXPRESS;Initial Catalog=AgendaEmpresarial;Integrated Security=True");
+            conexion = new SqlConnection("Data Source=LAPTOP-7JPH5U2H\\SQLExpress;Initial Catalog=DB_Agenda;Integrated Security=True");
             conexion.Open();
         }
 
@@ -157,7 +157,7 @@ namespace ProyectoAgendaSQL
         {
             List<Empleado> listaEmpleados = new List<Empleado>();
             //string consulta = string.Format("SELECT Id, Nombre, Telefono, Fax, Email, Departamento, Sucursal FROM Empleado WHERE Nombre like '%{0}%'", nombreBuscar);
-            string consulta = string.Format("SELECT E.Id, E.Nombre, E.Telefono, E.Fax, E.Email, D.Nombre, S.Nombre, E.Departamento, E.Sucursal  FROM [Empleado] E JOIN Departamento D ON E.Departamento = D.Id JOIN Sucursal S ON E.Sucursal = S.Id WHERE E.Nombre like '%{0}%'", nombreBuscar);
+            string consulta = string.Format("SELECT E.Id, E.Nombre, E.Telefono, E.Fax, E.Email, D.Nombre, S.Nombre, E.Departamento, E.Sucursal, E.Usuario, E.Password  FROM [Empleado] E JOIN Departamento D ON E.Departamento = D.Id JOIN Sucursal S ON E.Sucursal = S.Id WHERE E.Nombre like '%{0}%'", nombreBuscar);
             SqlCommand comando = new SqlCommand(consulta, conexion);
             SqlDataReader reader = comando.ExecuteReader();
 
@@ -173,6 +173,8 @@ namespace ProyectoAgendaSQL
                 aux.Departamento = new Departamento(reader.GetInt32(7), reader.GetString(5));
                 //aux.Sucursal= BusquedaIdSucursal(reader.GetInt32(6));
                 aux.Sucursal = new Sucursal(reader.GetInt32(8), reader.GetString(6));
+                aux.Usuario = reader.GetString(9);
+                aux.Password = reader.GetString(10);
                 listaEmpleados.Add(aux);
             }
 
@@ -226,6 +228,32 @@ namespace ProyectoAgendaSQL
 
             reader.Close();
             return empleados;
+        }
+
+        public static int Eliminar(Empleado empleado)
+        {
+            string consulta = string.Format("DELETE FROM Empleado WHERE Id='{0}'", empleado.Id);
+            SqlCommand comando = new SqlCommand(consulta, conexion);
+            int filasAfectadas = comando.ExecuteNonQuery();
+            return filasAfectadas;
+        }
+
+        public static int Modificar(Empleado empleado)
+        {
+            string consulta = string.Format("UPDATE Empleado SET Nombre = '{0}', Telefono = '{1}', Fax = '{2}', Email = '{3}', Departamento = '{4}', Sucursal = '{5}', Usuario = '{6}', Password = '{7}' WHERE Id='{8}';",
+                                                empleado.Nombre,
+                                                empleado.Telefono,
+                                                empleado.Fax,
+                                                empleado.Email,
+                                                empleado.Departamento.Id,
+                                                empleado.Sucursal.Id,
+                                                empleado.Usuario,
+                                                empleado.Password,
+                                                empleado.Id);
+
+            SqlCommand comando = new SqlCommand(consulta, conexion);
+            int filasAfectadas = comando.ExecuteNonQuery();
+            return filasAfectadas;
         }
     }
 }

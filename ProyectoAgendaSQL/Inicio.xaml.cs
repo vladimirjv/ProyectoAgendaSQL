@@ -24,25 +24,22 @@ namespace ProyectoAgendaSQL
             InitializeComponent();
         }
 
-
-        
-
         private void itemAdmin_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             (new Adminitrador()).Show();
-            this.Close();
+            this.Hide();
         }
 
         private void itemConsultas_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             (new wConsulta()).Show();
-            this.Close();
+            this.Hide();
         }
 
         private void itemEmpleado_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             (new wEmpleado()).Show();
-            this.Close();
+            this.Hide();
         }
 
         private void CerrarSeción_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -50,11 +47,5 @@ namespace ProyectoAgendaSQL
             (new MainWindow()).Show();
             this.Close();
         }
-
-        
-
-        
-
-        
     }
 }

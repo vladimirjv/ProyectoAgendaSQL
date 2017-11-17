@@ -20,6 +20,7 @@ namespace ProyectoAgendaSQL
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static Inicio inicio;
         public MainWindow()
         {
             InitializeComponent();
@@ -28,7 +29,19 @@ namespace ProyectoAgendaSQL
 
         private void btnAccederLogin_Click(object sender, RoutedEventArgs e)
         {
-            
+            accederLogIn();
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                accederLogIn();
+            }
+        }
+
+        private void accederLogIn()
+        {
             List<Empleado> userEmpleadoLogIn = DBAgenda.MatchUsuarioEmpleado(txtUsuario.Text);  //Busca un empleado
 
             if (userEmpleadoLogIn.Count == 0)
@@ -40,18 +53,24 @@ namespace ProyectoAgendaSQL
                 }
                 else
                 {
-                    if (userAdministradorLogIn.ElementAt(0).Password == txtPassword.Password){
-                        (new Inicio()).Show();
+                    if (userAdministradorLogIn.ElementAt(0).Password == txtPassword.Password)
+                    {
+                        inicio = new Inicio();
+                        inicio.Show();
                         this.Close();
                     }
                     else
                         MessageBox.Show("Contraseña Admin Incorrecta");
                 }
             }
-            else {
+            else
+            {
                 if (userEmpleadoLogIn.ElementAt(0).Password == txtPassword.Password)
                 {
-                    (new Inicio()).Show();
+                    inicio = new Inicio();
+                    inicio.Show();
+                    inicio.itemAdmin.IsEnabled = false;
+                    inicio.itemEmpleado.IsEnabled = false;
                     this.Close();
                 }
                 else

@@ -1,7 +1,7 @@
 ﻿<Window x:Class="ProyectoAgendaSQL.wConsulta"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="wConsulta" Height="633" Width="609" Loaded="Window_Loaded" ResizeMode="NoResize">
+        Name="winConsulta" Title="Consulta | Agenda" Height="633" Width="609" Loaded="Window_Loaded" ResizeMode="NoResize" Closed="winConsulta_Closed">
     <Grid>
         <Label Content="Consulta Empleados" HorizontalAlignment="Left" Margin="122,10,0,0" VerticalAlignment="Top" Height="60" Width="344" FontSize="36"/>
         <ListView x:Name="listviewConsulta" HorizontalAlignment="Left" Height="214" Margin="49,95,0,0" VerticalAlignment="Top" Width="526">

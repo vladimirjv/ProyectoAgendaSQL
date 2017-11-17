@@ -22,16 +22,17 @@ namespace ProyectoAgendaSQL
         public Adminitrador()
         {
             InitializeComponent();
+            this.Activate();
         }
 
-        private void btmAgregarAdministrador_Click(object sender, RoutedEventArgs e)
-        {
+        private void btmAgregarAdministrador_Click(object sender, RoutedEventArgs e) {
             try
             {
                 Administrador administrador = new Administrador();
                 administrador.Usuario = txtAdministradorUser.Text;
                 administrador.Password = (string)pswAdministrador.Password;
                 DBAgenda.AgregarAdministrador(administrador);
+                MessageBox.Show("Registro Añadido Exitosamente :)");
             }
             catch (Exception)
             {
@@ -51,6 +52,7 @@ namespace ProyectoAgendaSQL
                     departamento.Descripcion = "";
                 }
                 DBAgenda.AgregarDepartamento(departamento);
+                MessageBox.Show("Registro Añadido Exitosamente :)");
 
             }
             catch (Exception)
@@ -71,6 +73,7 @@ namespace ProyectoAgendaSQL
                     sucursal.Descripcion = "";
                 }
                 DBAgenda.AgregarSucursal(sucursal);
+                MessageBox.Show("Registro Añadido Exitosamente :)");
             }
             catch (Exception)
             {
@@ -80,10 +83,12 @@ namespace ProyectoAgendaSQL
 
         private void btnRegresar_Click(object sender, RoutedEventArgs e)
         {
-            (new Inicio()).Show();
             this.Close();
         }
 
-
+        private void wAdministrador_Closed(object sender, EventArgs e)
+        {
+            MainWindow.inicio.Show();
+        }
     }
 }

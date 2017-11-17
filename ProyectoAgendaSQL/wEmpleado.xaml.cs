@@ -44,27 +44,26 @@ namespace ProyectoAgendaSQL
         {
             try{
                 List<Empleado> userEmpleadoLogIn = DBAgenda.MatchUsuarioEmpleado(txtUsuario.Text);
-                if (userEmpleadoLogIn.Count == 0)
+                List<Administrador> userAdministradorLogIn = DBAgenda.MatchUsuarioAdministrador(txtUsuario.Text);  //Busca un administrador
+                if ((userEmpleadoLogIn.Count == 0 && userAdministradorLogIn.Count == 0))
                 {
-                    Empleado empleado = new Empleado();
-                    empleado.Nombre = txtNombre.Text;
-                    empleado.Telefono = txtTelefono.Text;
-                    empleado.Fax = txtFax.Text;
-                    empleado.Email = txtEmail.Text;
-                    empleado.Departamento = (Departamento)listaDepartamentos.ElementAt(cmbDepartamento.SelectedIndex);
-                    empleado.Sucursal = (Sucursal)listaSucursales.ElementAt(cmbSucursal.SelectedIndex); ;
-                    empleado.Usuario = txtUsuario.Text;
-                    empleado.Password = txtPassword.Password;
-                    DBAgenda.AgregarEmpleado(empleado);
-                    
+                        Empleado empleado = new Empleado();
+                        empleado.Nombre = txtNombre.Text;
+                        empleado.Telefono = txtTelefono.Text;
+                        empleado.Fax = txtFax.Text;
+                        empleado.Email = txtEmail.Text;
+                        empleado.Departamento = (Departamento)listaDepartamentos.ElementAt(cmbDepartamento.SelectedIndex);
+                        empleado.Sucursal = (Sucursal)listaSucursales.ElementAt(cmbSucursal.SelectedIndex); ;
+                        empleado.Usuario = txtUsuario.Text;
+                        empleado.Password = txtPassword.Password;
+                        DBAgenda.AgregarEmpleado(empleado);
 
-                    MessageBox.Show("Registro Añadido con Exito :)");
-                }
-                else
-                    MessageBox.Show("El usuario ya existe. Favor de introducir otro nombre de usuario ;)");               
-            }
-            catch(Exception)    {
-                MessageBox.Show("Revise los Datos Introducidos :(");
+                        MessageBox.Show("Registro Añadido con Exito :)");
+                   }
+                    else
+                        MessageBox.Show("El usuario ya existe. Favor de introducir otro nombre de usuario ;)");
+            } catch(Exception)    {
+                //MessageBox.Show("Revise los Datos Introducidos :(");
             }
         }
 
@@ -95,6 +94,13 @@ namespace ProyectoAgendaSQL
                     txtEmail.Text = empleadoSeleccionado.Telefono;
                     cmbDepartamento.SelectedItem  = empleadoSeleccionado.Departamento;
                     cmbSucursal.SelectedItem = empleadoSeleccionado.Sucursal;
+                    txtUsuario.Text = empleadoSeleccionado.Usuario;
+                    txtPassword.Password = empleadoSeleccionado.Password;
+
+                    Departamento departamento = listaDepartamentos.Find(s => s.Id == empleadoSeleccionado.Departamento.Id);
+                    cmbDepartamento.SelectedItem = departamento;
+                    Sucursal sucursal = listaSucursales.Find(s => s.Id == empleadoSeleccionado.Sucursal.Id);
+                    cmbSucursal.SelectedItem = sucursal;
                 }
                 else
                 {
@@ -113,12 +119,70 @@ namespace ProyectoAgendaSQL
 
         private void btnModificar_Click(object sender, RoutedEventArgs e)
         {
-        }
+            try
+            {
+            List<Empleado> userEmpleadoLogIn = DBAgenda.MatchUsuarioEmpleado(txtUsuario.Text);
+            List<Administrador> userAdministradorLogIn = DBAgenda.MatchUsuarioAdministrador(txtUsuario.Text);  //Busca un administrador
+            if ((userEmpleadoLogIn.Count == 0 && userAdministradorLogIn.Count == 0) || txtUsuario.Text == ((Empleado)listViewEmpleados.SelectedItem).Usuario)
+            {
+                if (listViewEmpleados.SelectedItems.Count == 1)
+                {
+                    Empleado auxEmpleado = (Empleado)listViewEmpleados.SelectedItem;
+                    Departamento auxDepartamento = (Departamento)cmbDepartamento.SelectedItem;
+                    DBAgenda.Modificar(new Empleado(auxEmpleado.Id, txtNombre.Text, txtTelefono.Text, txtFax.Text, txtEmail.Text, (Departamento)cmbDepartamento.SelectedItem, (Sucursal)cmbSucursal.SelectedItem, txtUsuario.Text, txtPassword.Password));
+                    txtNombre.Text = "";
+                    txtTelefono.Text = "";
+                    txtFax.Text = "";
+                    txtEmail.Text = "";
+                    cmbDepartamento.SelectedIndex = 0;
+                    cmbSucursal.SelectedIndex = 0;
+                    txtUsuario.Text = "";
+                    txtPassword.Password = "";
+                    listViewEmpleados.ItemsSource = null;
+                    listViewEmpleados.Items.Refresh();
+                    MessageBox.Show("Registro Modificado Exitosamente :)");
+                }
+            }
+            else
+            {
+                MessageBox.Show("El usuario ya existe. Ingrese otro usuario.");
+            }
+            }catch (Exception) {}
 
+        }
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {
-            (new Inicio()).Show();
             this.Close();
+        }
+
+        private void btnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (listViewEmpleados.SelectedItems.Count == 1)
+                {
+                    DBAgenda.Eliminar((Empleado)listViewEmpleados.SelectedItem);
+                    txtNombre.Text = "";
+                    txtTelefono.Text = "";
+                    txtFax.Text = "";
+                    txtEmail.Text = "";
+                    txtUsuario.Text = "";
+                    txtPassword.Password = "";
+                    cmbDepartamento.SelectedIndex = 0;
+                    cmbSucursal.SelectedIndex = 0;
+                    listViewEmpleados.ItemsSource = null;
+                    listViewEmpleados.Items.Refresh();
+                    MessageBox.Show("Registro Eliminado Exitosamente");
+                }
+            }
+            catch (Exception) {
+                MessageBox.Show("Un error ha ocurrido al eliminar registro");
+            }
+        }
+
+        private void wEmpleados_Closed(object sender, EventArgs e)
+        {
+            MainWindow.inicio.Show();
         }
     }
 }

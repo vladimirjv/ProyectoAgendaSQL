@@ -39,3 +39,4 @@ C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\Pr
 C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.g.resources
 C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.Properties.Resources.resources
 C:\Users\B6-JU\Documents\GitHub\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.csproj.GenerateResource.Cache
+C:\Users\aleja\Documents\Visual Studio 2013\Projects\ProyectoAgendaSQL\ProyectoAgendaSQL\ProyectoAgendaSQL\obj\Debug\ProyectoAgendaSQL.csprojResolveAssemblyReference.cache

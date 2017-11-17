@@ -54,21 +54,17 @@ namespace ProyectoAgendaSQL
                 empleado = DBAgenda.ConsultaEmpleadosConNombre(txtNombre.Text,((Departamento)cmbDepartamento.SelectedItem).Nombre,((Sucursal)cmbBoxSucursal.SelectedItem).Nombre);
                 listviewConsulta.ItemsSource = empleado;
                 listviewConsulta.Items.Refresh();
-
             }
-            
         }
 
         private void btnCerrarBusqueda_Click(object sender, RoutedEventArgs e)
         {
-            (new Inicio()).Show();
             this.Close();
         }
 
-        
-
-        
-
-        
+        private void winConsulta_Closed(object sender, EventArgs e)
+        {
+            MainWindow.inicio.Show();
+        }
     }
 }
