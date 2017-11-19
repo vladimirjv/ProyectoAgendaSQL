@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
+//using System.Windows;
 
 namespace ProyectoAgendaSQL
 {
@@ -13,7 +13,7 @@ namespace ProyectoAgendaSQL
         static SqlConnection conexion;
         public static void DBConectar()
         {
-            conexion = new SqlConnection("Data Source=LAPTOP-7JPH5U2H\\SQLExpress;Initial Catalog=DB_Agenda;Integrated Security=True");
+            conexion = new SqlConnection("Data Source=LAPTOP-Q2ET4LU7\\SQLEXPRESS;Initial Catalog=AgendaEmpresarial;Integrated Security=True;");
             conexion.Open();
         }
 
@@ -185,7 +185,7 @@ namespace ProyectoAgendaSQL
         public static List<Empleado> ConsultaEmpleadosConNombre(string nombre, string departamento, string sucursal)
         {
             List<Empleado> empleados = new List<Empleado>();
-            MessageBox.Show(departamento + sucursal);
+            //MessageBox.Show(departamento + sucursal);
             string query = string.Format("SELECT E.Id, E.Nombre, E.Telefono, E.Fax, E.Email, D.Nombre, S.Nombre, E.Departamento, E.Sucursal  FROM [Empleado] E JOIN Departamento D ON E.Departamento = D.Id JOIN Sucursal S ON E.Sucursal = S.Id WHERE E.Nombre LIKE '%{0}%' AND D.Nombre LIKE '%{1}%' AND S.Nombre LIKE '%{2}%'", nombre,departamento,sucursal);
             SqlCommand comando = new SqlCommand(query, conexion);
             SqlDataReader reader = comando.ExecuteReader();
